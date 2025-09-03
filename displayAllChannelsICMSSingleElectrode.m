@@ -1,5 +1,7 @@
-% Display All Channels
-function displayAllChannelsGRF(subjectName,expDate,protocolName,folderSourceString,gridType,gridLayout,badTrialNameStr,useCommonBadTrialsFlag)
+% Display All Channels after grouping them based on electrode distance from
+% the stimulation electrode.
+
+function displayAllChannelsICMSSingleElectrode(subjectName,expDate,protocolName,folderSourceString,gridType,gridLayout,badTrialNameStr,useCommonBadTrialsFlag)
 
 if ~exist('folderSourceString','var');   folderSourceString='E:';       end
 if ~exist('gridType','var');             gridType='EEG';                end
