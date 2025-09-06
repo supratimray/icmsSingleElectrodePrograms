@@ -410,6 +410,7 @@ colorNames = jet(numConditions);
 
         for iGroup = 1:numElectrodeGroups
             ylabel(hERP(iGroup),groupNameList{iGroup},'color',colorNamesElectrodeGroups(iGroup,:));
+            text(0.8,0.8,['N=' num2str(length(electrodeGroupList{iGroup}))],'units','Normalized','Parent',hERP(iGroup));
         end
     end
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -450,7 +451,6 @@ colorNames = jet(numConditions);
 
     end
 end
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function yLims = getYLims(plotHandles)
@@ -515,7 +515,7 @@ for i=1:length(goodElectrodes)
 end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%% Now pool by distance %%%%%%%%%%%%%%%%%%%%%%%%%%%
-distanceRangeList = 0:0.5:2.5;
+distanceRangeList = 0:0.4:2.4;
 numDistanceRangeList = length(distanceRangeList);
 electrodeGroupList = cell(1,numDistanceRangeList);
 groupNameList = cell(1,numDistanceRangeList);
